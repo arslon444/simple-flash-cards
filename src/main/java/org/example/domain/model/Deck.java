@@ -17,4 +17,9 @@ public class Deck {
         this.userId = userId;
         this.name = name;
     }
+
+    public Deck(UUID userId, String name) {
+        this.userId = userId;
+        this.name = name;
+    }
 }

@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import org.example.datasource.mapper.DeckMapperData;
+import org.example.datasource.model.CardData;
+import org.example.datasource.model.DeckData;
 import org.example.datasource.repository.DeckRepository;
 import org.example.domain.model.Deck;
 import org.springframework.stereotype.Service;
@@ -21,21 +23,30 @@ public class DeckServiceImpl implements DeckService{
 
     @Override
     public Deck createDeck(String name, UUID userId) {
-        return null;
+        Deck deck = new Deck(userId, name);
+        DeckData deckData = deckMapperData.toDatasource(deck);
+        DeckData saveDeckData = deckRepository.save(deckData);
+        return deckMapperData.toDomain(saveDeckData);
     }
 
     @Override
     public List<Deck> getDeckByUser(UUID userId) {
-        return List.of();
+        List<DeckData> deckDataList = deckRepository.findByUserId(userId);
+        return deckDataList.stream()
+                .map(deckMapperData::toDomain)
+                .toList();
     }
 
     @Override
     public Deck renameDeck(String name, UUID deckId) {
-        return null;
+        DeckData deckData = deckRepository.findById(deckId).orElseThrow();
+        deckData.setName(name);
+        DeckData saveDeckData = deckRepository.save(deckData);
+        return deckMapperData.toDomain(saveDeckData);
     }
 
     @Override
     public void deleteDeck(UUID deckId) {
-
+        deckRepository.deleteById(deckId);
     }
 }
