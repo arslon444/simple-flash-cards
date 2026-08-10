@@ -30,16 +30,23 @@ public class CardServiceImpl implements CardService{
 
     @Override
     public List<Card> getCardByDeck(UUID deckId) {
-
+        List<CardData> cardDataList = cardRepository.findByDeckId(deckId);
+        return cardDataList.stream()
+                .map(cardMapperData::toDomain)
+                .toList();
     }
 
     @Override
     public Card updateCard(String front, String back, UUID cardId) {
-        return null;
+        CardData cardData = cardRepository.findById(cardId).orElseThrow();
+        cardData.setFront(front);
+        cardData.setFront(back);
+        CardData saveUpdatedCard = cardRepository.save(cardData);
+        return cardMapperData.toDomain(saveUpdatedCard);
     }
 
     @Override
     public void deleteCard(UUID cardId) {
-
+        cardRepository.deleteById(cardId);
     }
 }
