@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import org.example.datasource.mapper.DeckMapperData;
-import org.example.datasource.model.CardData;
 import org.example.datasource.model.DeckData;
 import org.example.datasource.repository.DeckRepository;
 import org.example.domain.model.Deck;

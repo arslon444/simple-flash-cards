@@ -17,4 +17,9 @@ public class User {
         this.login = login;
         this.passwordHash = passwordHash;
     }
+
+    public User(String login, String passwordHash) {
+        this.login = login;
+        this.passwordHash = passwordHash;
+    }
 }

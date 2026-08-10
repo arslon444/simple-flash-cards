@@ -2,7 +2,9 @@ package org.example.web.mapper;
 
 import org.example.domain.model.Deck;
 import org.example.web.model.DeckWeb;
+import org.springframework.stereotype.Component;
 
+@Component
 public class DeckMapperWeb {
     public DeckWeb toWeb(Deck deck) {
         return new DeckWeb(deck.getId(), deck.getUserId(), deck.getName());
