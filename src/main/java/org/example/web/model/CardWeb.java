@@ -13,7 +13,7 @@ public class CardWeb {
     private String front;
     private String back;
 
-    public CardWeb(UUID id, UUID deckId, String back, String front) {
+    public CardWeb(UUID id, UUID deckId, String front, String back) {
         this.id = id;
         this.back = back;
         this.front = front;

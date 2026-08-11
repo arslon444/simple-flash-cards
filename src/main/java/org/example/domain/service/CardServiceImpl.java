@@ -40,7 +40,7 @@ public class CardServiceImpl implements CardService{
     public Card updateCard(String front, String back, UUID cardId) {
         CardData cardData = cardRepository.findById(cardId).orElseThrow();
         cardData.setFront(front);
-        cardData.setFront(back);
+        cardData.setBack(back);
         CardData saveUpdatedCard = cardRepository.save(cardData);
         return cardMapperData.toDomain(saveUpdatedCard);
     }

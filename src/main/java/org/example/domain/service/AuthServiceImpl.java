@@ -7,6 +7,7 @@ import org.example.datasource.mapper.UserMapperData;
 import org.example.datasource.model.UserData;
 import org.example.datasource.repository.UserRepository;
 import org.example.domain.model.User;
+import org.example.security.JwtService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -21,20 +22,25 @@ public class AuthServiceImpl implements AuthService{
     private final JwtService jwtService;
 
     @Override
-    public User register(String login, String password) {
-        String hashPassword = passwordEncoder.encode(password);
-        User user = new User(login, hashPassword);
+    public String register(String login, String password) {
+        String passwordHash = passwordEncoder.encode(password);
+        User user = new User(login, passwordHash);
         UserData userData = userMapperData.toDatasource(user);
-        UserData saveUserData = userRepository.save(userData);
-        return userMapperData.toDomain(saveUserData);
+        UserData savedUserData = userRepository.save(userData);
+        User savedUser = userMapperData.toDomain(savedUserData);
+
+        return jwtService.generateToken(savedUser.getId());
     }
 
     @Override
     public String login(String login, String password) {
         UserData userData = userRepository.findByLogin(login)
                 .orElseThrow(() -> new RuntimeException("Пользователь не найден"));
-        if (!passwordEncoder.matches(password, userData.getPasswordHash()))
-            throw new RuntimeException("Неверный пароль");
 
+        if (!passwordEncoder.matches(password, userData.getPasswordHash())) {
+            throw new RuntimeException("Неверный пароль");
+        }
+
+        return jwtService.generateToken(userData.getId());
     }
 }

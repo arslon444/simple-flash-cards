@@ -37,7 +37,7 @@ public class DeckServiceImpl implements DeckService{
     }
 
     @Override
-    public Deck renameDeck(String name, UUID deckId) {
+    public Deck renameDeck(UUID deckId, String name) {
         DeckData deckData = deckRepository.findById(deckId).orElseThrow();
         deckData.setName(name);
         DeckData saveDeckData = deckRepository.save(deckData);

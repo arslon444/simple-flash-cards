@@ -8,6 +8,6 @@ import java.util.UUID;
 public interface DeckService {
     Deck createDeck(String name, UUID userId);
     List<Deck> getDeckByUser(UUID userId);
-    Deck renameDeck(String name, UUID deckId);
+    Deck renameDeck(UUID deckId, String name);
     void deleteDeck(UUID deckId);
 }
