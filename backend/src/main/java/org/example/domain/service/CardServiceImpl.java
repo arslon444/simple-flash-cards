@@ -1,8 +1,6 @@
 package org.example.domain.service;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
 import org.example.datasource.mapper.CardMapperData;
 import org.example.datasource.model.CardData;
 import org.example.datasource.repository.CardRepository;
@@ -13,10 +11,8 @@ import java.util.List;
 import java.util.UUID;
 
 @Service
-@Getter
-@Setter
 @AllArgsConstructor
-public class CardServiceImpl implements CardService{
+public class CardServiceImpl implements CardService {
     private final CardRepository cardRepository;
     private final CardMapperData cardMapperData;
 
@@ -49,4 +45,12 @@ public class CardServiceImpl implements CardService{
     public void deleteCard(UUID cardId) {
         cardRepository.deleteById(cardId);
     }
+
+    @Override
+    public Card getRandomCard(UUID deckId) {
+        return cardRepository.findRandomByDeckId(deckId)
+                .map(cardMapperData::toDomain)
+                .orElse(null);
+    }
+
 }

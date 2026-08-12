@@ -10,4 +10,5 @@ public interface CardService {
     List<Card> getCardByDeck(UUID deckId);
     Card updateCard(String front, String back, UUID cardId);
     void deleteCard(UUID cardId);
+    Card getRandomCard(UUID deckId);
 }

@@ -39,6 +39,11 @@ public class CardController {
         return cardMapperWeb.toWeb(card);
     }
 
+    @GetMapping("/getrandomcard/{deckId}")
+    public Card getRandomCard(@PathVariable UUID deckId) {
+        return cardService.getRandomCard(deckId);
+    }
+
     @DeleteMapping("/edit/delete")
     public void deleteCard(@RequestBody DeckWeb request) {
         cardService.deleteCard(request.getId());
