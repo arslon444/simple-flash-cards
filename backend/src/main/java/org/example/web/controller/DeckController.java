@@ -1,6 +1,6 @@
 package org.example.web.controller;
 
-import lombok.AllArgsConstructor;
+import jakarta.validation.Valid;import lombok.AllArgsConstructor;
 import org.example.domain.model.Deck;
 import org.example.domain.service.DeckService;
 import org.example.web.mapper.DeckMapperWeb;
@@ -19,7 +19,7 @@ public class DeckController {
     private final DeckMapperWeb deckMapperWeb;
 
     @PostMapping("/createdeck")
-    public DeckWeb createDeck(@RequestBody DeckWeb request) {
+    public DeckWeb createDeck(@Valid @RequestBody DeckWeb request) {
         UUID userId = (UUID) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         Deck deck = deckService.createDeck(request.getName(), userId);
         return deckMapperWeb.toWeb(deck);

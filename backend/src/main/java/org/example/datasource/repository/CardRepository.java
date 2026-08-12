@@ -8,4 +8,5 @@ import java.util.UUID;
 
 public interface CardRepository extends CrudRepository<CardData, UUID> {
     List<CardData> findByDeckId(UUID deckId);
+    void deleteByDeckId(UUID deckId);
 }

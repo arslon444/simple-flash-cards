@@ -1,5 +1,6 @@
 package org.example.web.controller;
 
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.example.domain.model.Card;
 import org.example.domain.service.CardService;
@@ -19,12 +20,12 @@ public class CardController {
     private final CardMapperWeb cardMapperWeb;
 
     @PostMapping("/createcard")
-    public CardWeb createCard(@RequestBody CardWeb request) {
+    public CardWeb createCard(@Valid @RequestBody CardWeb request) {
         Card card = cardService.createCard(request.getFront(), request.getBack(), request.getDeckId());
         return cardMapperWeb.toWeb(card);
     }
 
-    @GetMapping("/{deckId}/getcards")
+    @GetMapping("/getcards/{deckId}")
     public List<CardWeb> getCards(@PathVariable UUID deckId) {
         List<Card> cards = cardService.getCardByDeck(deckId);
         return cards.stream()

@@ -5,99 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7487856-5790-4e79-bdb1-4332f6b1efb3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/datasource/mapper/CardMapperData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/datasource/mapper/DeckMapperData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/datasource/mapper/UserMapperData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/datasource/model/CardData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/datasource/model/DeckData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/datasource/model/UserData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/datasource/repository/CardRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/datasource/repository/DeckRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/datasource/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/domain/model/Card.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/domain/model/Deck.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/domain/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/domain/service/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/domain/service/AuthServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/domain/service/CardService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/domain/service/CardServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/domain/service/DeckService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/domain/service/DeckServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/security/AuthFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/security/JwtService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/web/controller/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/web/controller/CardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/web/controller/DeckController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/web/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/web/mapper/CardMapperWeb.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/web/mapper/DeckMapperWeb.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/web/mapper/UserMapperWeb.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/web/model/CardWeb.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/web/model/DeckWeb.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/web/model/SignUpRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/web/model/UserWeb.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/datasource/mapper/CardMapperData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/datasource/mapper/DeckMapperData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/datasource/mapper/UserMapperData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/datasource/model/CardData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/datasource/model/DeckData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/datasource/model/UserData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/datasource/repository/CardRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/datasource/repository/DeckRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/datasource/repository/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/model/Card.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/model/Deck.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/model/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/service/AuthService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/service/AuthServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/service/CardService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/service/CardServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/service/DeckService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/service/DeckServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/security/AuthFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/security/JwtService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/security/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/controller/AuthController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/controller/CardController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/controller/DeckController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/exception/GlobalExceptionHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/mapper/CardMapperWeb.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/mapper/DeckMapperWeb.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/mapper/UserMapperWeb.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/model/CardWeb.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/model/DeckWeb.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/model/SignUpRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/model/UserWeb.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/example/datasource/repository/CardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/datasource/repository/CardRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/example/domain/service/AuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/domain/service/AuthServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/example/domain/service/DeckServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/domain/service/DeckServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/example/web/controller/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/web/controller/CardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/example/web/controller/DeckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/web/controller/DeckController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/example/web/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/web/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/example/web/model/CardWeb.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/web/model/CardWeb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/example/web/model/DeckWeb.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/web/model/DeckWeb.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DatabaseLocalColorSettings">
-    <colors>
-      <entry key="0242529d-53a3-4aaf-bdbb-db663286a0d2" value="" />
-    </colors>
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">

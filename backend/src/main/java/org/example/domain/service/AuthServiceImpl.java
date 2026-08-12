@@ -35,10 +35,10 @@ public class AuthServiceImpl implements AuthService{
     @Override
     public String login(String login, String password) {
         UserData userData = userRepository.findByLogin(login)
-                .orElseThrow(() -> new RuntimeException("Пользователь не найден"));
+                .orElseThrow(() -> new RuntimeException("Неверный логин или пароль"));
 
         if (!passwordEncoder.matches(password, userData.getPasswordHash())) {
-            throw new RuntimeException("Неверный пароль");
+            throw new RuntimeException("Неверный логин или пароль");
         }
 
         return jwtService.generateToken(userData.getId());
