@@ -3,7 +3,7 @@ const API_URL = 'http://localhost:8080'
 function authHeaders(token) {
   return {
     'Content-Type': 'application/json',
-    'Authorization': `Bearer ${token}`,
+    Authorization: `Bearer ${token}`,
   }
 }
 

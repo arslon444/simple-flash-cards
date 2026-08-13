@@ -48,20 +48,46 @@ export default function CardFormPage() {
   }
 
   return (
-    <div>
-      <h1>{isEdit ? 'Редактировать карточку' : 'Новая карточка'}</h1>
-      {error && <p>{error}</p>}
+    <div className="page">
+      <div className="form-page">
+        <div className="page-title">{isEdit ? 'Редактировать карточку' : 'Новая карточка'}</div>
 
-      <div>
-        <input placeholder="Front" value={front} onChange={(e) => setFront(e.target.value)} />
-      </div>
-      <div>
-        <input placeholder="Back" value={back} onChange={(e) => setBack(e.target.value)} />
-      </div>
+        {error && <p className="error-text">{error}</p>}
 
-      <button onClick={handleSave}>Сохранить</button>
-      {isEdit && <button onClick={handleDelete}>Удалить</button>}
-      <button onClick={() => navigate(`/decks/${deckId}/cards`)}>Назад</button>
+        <div style={{ marginTop: 24 }}>
+          <input
+            className="input"
+            placeholder="Front"
+            value={front}
+            onChange={(e) => setFront(e.target.value)}
+          />
+          <input
+            className="input"
+            placeholder="Back"
+            value={back}
+            onChange={(e) => setBack(e.target.value)}
+          />
+        </div>
+
+        <div className="form-actions">
+          <button className="btn btn-primary" onClick={handleSave}>
+            Сохранить
+          </button>
+          {isEdit && (
+            <button className="btn btn-danger" onClick={handleDelete}>
+              Удалить
+            </button>
+          )}
+        </div>
+
+        <button
+          className="btn btn-ghost"
+          style={{ marginTop: 12 }}
+          onClick={() => navigate(`/decks/${deckId}/cards`)}
+        >
+          ← Назад
+        </button>
+      </div>
     </div>
   )
 }

@@ -54,48 +54,52 @@ export default function DashboardPage() {
   }
 
   return (
-    <div style={{ position: 'relative', minHeight: '100vh' }}>
-      <h1>Мои колоды</h1>
-      {error && <p>{error}</p>}
+    <div className="page">
+      <div className="page-header">
+        <div className="page-title">Мои колоды</div>
+      </div>
 
-      <div>
+      {error && <p className="error-text">{error}</p>}
+
+      <div className="deck-grid">
         {decks.map((deck) => (
           <div
             key={deck.id}
-            style={{ position: 'relative', display: 'inline-block', margin: 8 }}
-            onMouseEnter={() => setMenuOpenId(deck.id)}
+            className="deck-tile"
             onMouseLeave={() => setMenuOpenId(null)}
           >
-            <button onClick={() => navigate(`/decks/${deck.id}`)}>
+            <button
+              className="deck-tile-btn"
+              onClick={() => navigate(`/decks/${deck.id}`)}
+            >
               {deck.name}
             </button>
 
-            <span style={{ position: 'absolute', top: 0, right: -20 }}>⋮</span>
+            <span
+              className="deck-menu-trigger"
+              onClick={(e) => {
+                e.stopPropagation()
+                setMenuOpenId(menuOpenId === deck.id ? null : deck.id)
+              }}
+            >
+              ⋮
+            </span>
 
             {menuOpenId === deck.id && (
-              <div style={{ position: 'absolute', top: 20, right: -20, border: '1px solid gray', background: '#222', padding: 4, zIndex: 10 }}>
-                <div onClick={() => handleRename(deck)} style={{ cursor: 'pointer' }}>Rename</div>
-                <div onClick={() => handleDelete(deck)} style={{ cursor: 'pointer' }}>Delete</div>
+              <div className="dropdown-menu">
+                <div className="dropdown-item" onClick={() => handleRename(deck)}>
+                  Переименовать
+                </div>
+                <div className="dropdown-item danger" onClick={() => handleDelete(deck)}>
+                  Удалить
+                </div>
               </div>
             )}
           </div>
         ))}
       </div>
 
-      <button
-        onClick={handleCreateDeck}
-        style={{
-          position: 'fixed',
-          bottom: 20,
-          right: 20,
-          borderRadius: '50%',
-          width: 50,
-          height: 50,
-          fontSize: 24,
-        }}
-      >
-        +
-      </button>
+      <button className="fab" onClick={handleCreateDeck}>+</button>
     </div>
   )
 }

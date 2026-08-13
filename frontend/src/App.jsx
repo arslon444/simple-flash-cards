@@ -1,9 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import './App.css'
+
 import MainPage from './pages/MainPage'
 import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
 import DashboardPage from './pages/DashboardPage'
-import DeckPage from './pages/DeckPages'
+import DeckPage from './pages/DeckPage'
 import CardsListPage from './pages/CardsListPage'
 import CardFormPage from './pages/CardFormPage'
 

@@ -16,32 +16,29 @@ export default function CardsListPage() {
   }, [])
 
   return (
-    <div style={{ position: 'relative', minHeight: '100vh' }}>
-      <h1>Карточки</h1>
-      {error && <p>{error}</p>}
+    <div className="page">
+      <div className="page-header">
+        <div className="page-title">Карточки</div>
+        <button className="btn btn-ghost" onClick={() => navigate(`/decks/${deckId}`)}>
+          ← Назад к колоде
+        </button>
+      </div>
+
+      {error && <p className="error-text">{error}</p>}
 
       {cards.map((c) => (
         <div
           key={c.id}
+          className="card-row"
           onClick={() => navigate(`/decks/${deckId}/cards/${c.id}`)}
-          style={{ border: '1px solid gray', padding: 10, margin: '8px 0', cursor: 'pointer' }}
         >
-          {c.front}
+          <span className="card-row-text">{c.front}</span>
         </div>
       ))}
 
-      <button
-        onClick={() => navigate(`/decks/${deckId}/cards/new`)}
-        style={{
-          position: 'fixed',
-          bottom: 20,
-          right: 20,
-          borderRadius: '50%',
-          width: 50,
-          height: 50,
-          fontSize: 24,
-        }}
-      >
+      {cards.length === 0 && !error && <p className="empty-state">Карточек пока нет</p>}
+
+      <button className="fab" onClick={() => navigate(`/decks/${deckId}/cards/new`)}>
         +
       </button>
     </div>
