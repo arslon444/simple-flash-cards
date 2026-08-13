@@ -54,7 +54,7 @@ export default function DeckPage() {
             </div>
           </div>
           <button className="btn btn-primary next-card-btn" onClick={loadCard}>
-            Следующая карта →
+            Случайная карта →
           </button>
         </>
       ) : (

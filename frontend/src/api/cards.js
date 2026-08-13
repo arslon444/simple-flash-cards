@@ -30,7 +30,10 @@ export async function createCard(front, back, deckId, token) {
     headers: authHeaders(token),
     body: JSON.stringify({ front, back, deckId }),
   })
-  if (!response.ok) throw new Error('Не удалось создать карточку')
+  if (!response.ok) {
+    const errorData = await response.json().catch(() => ({}))
+    throw new Error(errorData.message || 'Не удалось создать карточку')
+  }
   return response.json()
 }
 

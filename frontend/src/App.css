@@ -271,7 +271,7 @@ input {
 
 .deck-menu-trigger:hover {
   color: var(--text);
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(60, 3, 126, 0.06);
 }
 
 .dropdown-menu {

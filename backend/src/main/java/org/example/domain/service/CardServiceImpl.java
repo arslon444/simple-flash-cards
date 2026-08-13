@@ -52,5 +52,4 @@ public class CardServiceImpl implements CardService {
                 .map(cardMapperData::toDomain)
                 .orElse(null);
     }
-
 }
