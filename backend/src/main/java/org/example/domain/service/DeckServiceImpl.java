@@ -18,8 +18,6 @@ import java.util.List;
 import java.util.UUID;
 
 @Service
-@Getter
-@Setter
 @AllArgsConstructor
 public class DeckServiceImpl implements DeckService{
     private final DeckRepository deckRepository;
