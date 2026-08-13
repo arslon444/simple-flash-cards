@@ -13,7 +13,10 @@ export default function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
-        <Route path="/decks/:deckId" element={<DeckPage />} />
+        <Route path="/decks/:deckId" element={<DeckPage />} />'
+        <Route path="/decks/:deckId/cards" element={<CardsListPage />} />
+        <Route path="/decks/:deckId/cards/new" element={<CardFormPage />} />
+        <Route path="/decks/:deckId/cards/:cardId" element={<CardFormPage />} />
       </Routes>
     </BrowserRouter>
   )
