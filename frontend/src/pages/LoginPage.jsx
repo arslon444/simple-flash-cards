@@ -12,7 +12,7 @@ export default function LoginPage() {
     try {
       const token = await login(loginValue, password)
       localStorage.setItem('token', token)
-      navigate('/decks')
+      navigate('/dashboard')
     } catch (err) {
       setError(err.message)
     }

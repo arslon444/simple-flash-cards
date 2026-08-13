@@ -12,7 +12,7 @@ export default function RegisterPage() {
     try {
       const token = await register(loginValue, password)
       localStorage.setItem('token', token)
-      navigate('/decks')
+      navigate('/dashboard')
     } catch (err) {
       setError(err.message)
     }
